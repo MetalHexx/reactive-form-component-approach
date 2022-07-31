@@ -1,7 +1,9 @@
 /**
  * A utility library of common angular reactive form interactions
  * to help make form interactions a little easier and less noisy
- * in components.
+ * in components.  If you find yourself adding a lot of implementation
+ * details in your component, see if you can generalize it and stick it
+ * here instead.
  */
 
 import { AbstractControl, FormArray, FormControl, FormGroup } from "@angular/forms";
