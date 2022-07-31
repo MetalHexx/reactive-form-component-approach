@@ -22,5 +22,5 @@ Because each component receives just a slice of the form, it makes those compone
 - Pass a child FormGroup, FormArray or FormControl as @Input() to a child component to form a tree of components that match your form structure
     -  I would strongly avoid passing more than one AbstractControl to a form.  The component should do one thing well.
     -  The more you break it up, the more lightweight and easy to test the components will be
-- Optionally (encouraged), inherit components from BaseFormGroupComponent or BaseFormArrayComponent to enhance your components with generalized utility methods for common form interactions / behavior
+- Optionally (encouraged), inherit components from BaseFormGroupComponent or BaseFormArrayComponent (or some other preferred organizational pattern) to enhance your components with baseline generalized utility methods for common form interactions / behavior
   - Alternatively or supplementary, use form helper functions directly for special situations
