@@ -6,7 +6,7 @@ An experimental code repository to showcase an approach to map reactive form ele
 Time and time again, I see complex angular reactive forms and components involved become an explosion of bloated form interactions and fine grained implementation details.  These forms are difficult to reason with and tough to maintain.  This repository aims to share a pattern with some utility code to hopefully help make things a bit easier for some projects.
 
 ## The Approach
-The general approach is to build a component structure that maps to the shape of the reactive form.  At the top, you have a FormGroup and a component that hosts it.  From this top component, you pass the forms child FormGroups, FormArrays or even FormControls to corresponding child components.  
+The general approach is to build a component structure that maps to the shape of the reactive form.  At the top, you have a FormGroup and a component that hosts it.  From this top component, you pass the forms child FormGroups, FormArrays or even FormControls to corresponding child components.  You keep repeating this process for all (or most) nested child AbstractControls until you have a component tree that more or less matches your form 1 to 1.  Use your best judgement where to break things up as it fits your needs.
 
 The goal is that each component is responsible for the interactions needed for a small slice of the form. This keeps code focused on just that part of the form and maked things much easier to manage. 
 
