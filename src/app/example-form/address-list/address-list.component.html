@@ -1,0 +1,17 @@
+<button type="button" *ngIf="enableAdd" (click)="onAddClick()">Add Address</button>
+
+<br>
+
+<ng-container *ngFor="let addressGroup of getFormGroupArray()">
+
+  <br>
+
+  <app-address-item
+    [formGroup]="addressGroup"
+    [removeable]="true"
+    (addressRemoved)="removeItem($event)">
+  </app-address-item>
+
+<br>
+
+</ng-container>

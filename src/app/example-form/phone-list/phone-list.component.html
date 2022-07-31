@@ -1,0 +1,14 @@
+<button type="button" *ngIf="enableAdd" (click)="onAddClick()">Add Phone</button>
+
+<ng-container *ngFor="let phoneGroup of getFormGroupArray()">
+
+  <br>
+
+  <app-phone-item
+    [formGroup]="phoneGroup"
+    [removeable]="true"
+    [enablePhoneType]="true"
+    (phoneRemoved)="removeItem($event)">
+  </app-phone-item>
+
+</ng-container>

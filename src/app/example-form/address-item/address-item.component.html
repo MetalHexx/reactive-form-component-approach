@@ -1,0 +1,18 @@
+<ng-container *ngIf="formGroup" [formGroup]="formGroup">
+
+  <label for="street">Street Address</label>
+  <div>
+    <input type="text" id="street" [formControlName]="'street'">
+    <span class="error-message" *ngIf="controlHasError('street', 'required')">Required Field</span>
+  </div>
+
+  <label for="zip">Zip Code</label>
+  <div>
+    <input type="text" id="zip" [formControlName]="'zip'">
+    <span class="error-message" *ngIf="controlHasError('zip', 'required')">Required Field</span>
+  </div>
+
+  <button type="button" *ngIf="removeable" (click)="onRemoveClick()">Remove Address</button>
+
+</ng-container>
+

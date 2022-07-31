@@ -1,0 +1,30 @@
+<ng-container *ngIf="formGroup" [formGroup]="formGroup">
+
+  <label for="firstName">First Name</label>
+  <div>
+    <input type="text" id="firstName" formControlName="firstName">
+    <span class="error-message" *ngIf="controlHasError('firstName', 'required')">Required Field</span>
+  </div>
+
+  <label for="lastName">Last Name</label>
+  <div>
+    <input type="text" id="lastName" formControlName="lastName">
+    <span class="error-message" *ngIf="controlHasError('lastName', 'required')">Required Field</span>
+  </div>
+
+  <br>
+
+  <h5>Addresses</h5>
+  <app-address-list
+    [formArray]="getChildFormArray('addresses')"
+    [enableAdd]="true">
+  </app-address-list>
+
+  <h5>Phone Numbers</h5>
+  <app-phone-list
+    [formArray]="getChildFormArray('phoneNumbers')"
+    [enableAdd]="true">
+  </app-phone-list>
+
+</ng-container>
+

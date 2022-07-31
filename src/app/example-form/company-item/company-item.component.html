@@ -1,0 +1,14 @@
+<ng-container *ngIf="formGroup" [formGroup]="formGroup">
+
+  <label for="companyName">Company Name</label>
+  <div>
+    <input type="text" id="companyName" formControlName="name">
+    <span class="error-message" *ngIf="controlHasError('name', 'required')">Required Field</span>
+  </div>
+
+  <div>
+    <app-address-item [formGroup]="getChildFormGroup('address')"></app-address-item>
+  </div>
+  <br>
+
+</ng-container>

@@ -1,0 +1,27 @@
+<ng-container *ngIf="formGroup" [formGroup]="formGroup">
+
+  <br>
+
+  <label for="number">Phone Number</label>
+  <div>
+    <input type="text" id="number" [formControlName]="'number'">
+    <span class="error-message" *ngIf="controlHasError('number', 'required')">Required Field</span>
+  </div>
+
+  <ng-container *ngIf="enablePhoneType">
+
+    <label for="type">Phone Type</label>
+    <div>
+      <select id="type" [formControlName]="'type'">
+        <option>Home</option>
+        <option>Mobile</option>
+        <option>Work</option>
+
+      </select>
+      <span class="error-message" *ngIf="controlHasError('type', 'required')">Required Field</span>
+    </div>
+  </ng-container>
+
+  <button type="button" *ngIf="removeable" (click)="onRemoveClick()">Remove Phone</button>
+
+</ng-container>

@@ -1,0 +1,10 @@
+<h2>Example Form</h2>
+<form *ngIf="formGroup" [formGroup]="formGroup">
+
+  <h3>User Info</h3>
+  <app-user-item [formGroup]="getChildFormGroup('user')"></app-user-item>
+
+  <h3>Company Info</h3>
+  <app-company-item [formGroup]="getChildFormGroup('company')"></app-company-item>
+
+</form>
