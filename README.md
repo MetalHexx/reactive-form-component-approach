@@ -19,7 +19,7 @@ Because each component receives just a slice of the form, it makes those compone
   - This keeps the form code tucked away and out of your component where things can get mixed up with other interactions
   - The only form building activities in a component will be in situations like adding or removing items from a FormArray, for example.
 - The top level FormGroup is placed in the top level component where your form tag lives
-- Pass a child FormGroup, FormArray or FormControl to a child component to form a tree of components that match your form structure
+- Pass a child FormGroup, FormArray or FormControl as @Input() to a child component to form a tree of components that match your form structure
     -  I would strongly avoid passing more than one AbstractControl to a form.  The component should do one thing well.
     -  The more you break it up, the more lightweight and easy to test the components will be
 - Optionally (encouraged), inherit components from BaseFormGroupComponent or BaseFormArrayComponent to enhance your components with generalized utility methods for common form interactions / behavior
