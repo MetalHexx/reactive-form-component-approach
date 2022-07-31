@@ -23,4 +23,4 @@ Because each component receives just a slice of the form, it makes those compone
     -  I would strongly avoid passing more than one AbstractControl to a form.  The component should do one thing well.
     -  The more you break it up, the more lightweight and easy to test the components will be
 - Optionally (encouraged), inherit components from BaseFormGroupComponent or BaseFormArrayComponent to enhance your components with generalized utility methods for common form interactions / behavior
-- Alternatively, use form helper functions directly or for special situations
+  - Alternatively or supplementary, use form helper functions directly for special situations
