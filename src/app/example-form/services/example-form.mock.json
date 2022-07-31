@@ -1,0 +1,37 @@
+{
+  "user": {
+    "firstName": "Heavy",
+    "lastName": "Metal",
+    "addresses": [
+      {
+        "street": "123 Dio Road",
+        "zip": "002112"
+      },
+      {
+        "street": "124 Dio Road",
+        "zip": "002112"
+      }
+    ],
+    "phoneNumbers": [
+      {
+        "number": "123-456-1234",
+        "type": 0
+      },
+      {
+        "number": "123-456-1234",
+        "type": 1
+      },
+      {
+        "number": "123-456-1234",
+        "type": 2
+      }
+    ]
+  },
+  "company": {
+    "name": "Rainbow Records",
+    "address": {
+      "street": "123 Spectral Road",
+      "zip": "002112"
+    }
+  }
+}
