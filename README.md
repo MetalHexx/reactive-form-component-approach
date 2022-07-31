@@ -1,6 +1,6 @@
 # An Angular Reactive Form Component Approach
 
-An experimental project with to come up with a clean way of mapping reactive forms elements to a component tree in a clean easy to maintain way.  
+An experimental code repository showcase an approach of mapping reactive form elements to a component tree in a way that is clean and easy to maintain.  
 
 ## Thoughts
 Time and time again, I see complex angular reactive forms and components involved become an explosion of bloated form interactions and fine grained implementation details.  These forms are hard to maintain and difficult to reason with and can be a nightmare to deal with.  This experiment aims to come up with a pattern and utility code to help make things a bit easier.
