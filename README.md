@@ -1,9 +1,9 @@
 # An Angular Reactive Form Component Approach
 
-An experimental code repository showcase an approach of mapping reactive form elements to a component tree in a way that is clean and easy to maintain.  
+An experimental code repository to showcase an approach to map reactive form elements to a component tree in a way that is clean and easy to maintain.  
 
 ## Thoughts
-Time and time again, I see complex angular reactive forms and components involved become an explosion of bloated form interactions and fine grained implementation details.  These forms are hard to maintain and difficult to reason with and can be a nightmare to deal with.  This experiment aims to come up with a pattern and utility code to help make things a bit easier.
+Time and time again, I see complex angular reactive forms and components involved become an explosion of bloated form interactions and fine grained implementation details.  These forms are difficult to reason with and tough to maintain.  This experiment aims to come up with a pattern and utility code to help make things a bit easier.
 
 ## The Approach
 The general approach is to build a component structure that maps to the shape of the reactive form.  At the top, you have a FormGroup and a component that hosts it.  From this top component, you pass the forms child FormGroups, FormArrays or even FormControls to corresponding child components.  
