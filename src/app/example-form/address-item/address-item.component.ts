@@ -9,7 +9,7 @@ import { BaseFormGroupComponent } from 'src/app/shared/utility/form/base-formgro
 })
 export class AddressGroupComponent extends BaseFormGroupComponent  {
   @Input() formGroup!: FormGroup;
-  @Input() removeable: boolean = false;
+  @Input() enableRemove: boolean = false;
   @Output() addressRemoved: EventEmitter<FormGroup> = new EventEmitter();
 
   constructor() {
