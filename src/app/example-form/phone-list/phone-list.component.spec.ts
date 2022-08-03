@@ -85,7 +85,7 @@ describe('PhoneListComponent', () => {
     expect(phoneItemComponent).toBeTruthy();
   });
 
-  it('formarray length should increase by 1 when add button is clicked', () => {
+  it('phone items count should increase by 1 when add button is clicked', () => {
     //arrange
     component.enableAdd = true;
 
