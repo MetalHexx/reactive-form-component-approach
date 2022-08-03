@@ -2,16 +2,20 @@
 
 <br>
 
-<ng-container *ngFor="let addressGroup of getFormGroupArray()">
+<ng-container *ngIf="formArray">
+  <ng-container *ngFor="let addressGroup of getFormGroupArray()">
+
+    <br>
+
+
+      <app-address-item
+        [formGroup]="addressGroup"
+        [enableRemove]="true"
+        (addressRemoved)="removeItem($event)">
+      </app-address-item>
 
   <br>
 
-  <app-address-item
-    [formGroup]="addressGroup"
-    [enableRemove]="true"
-    (addressRemoved)="removeItem($event)">
-  </app-address-item>
-
-<br>
-
+  </ng-container>
 </ng-container>
+
