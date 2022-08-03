@@ -31,34 +31,44 @@ describe('PhoneListComponent', () => {
   });
 
   it('should display add button when enableAdd is true', () => {
+    //arrange
     component.enableAdd = true;
 
+    //act
     fixture.detectChanges();
     const addButton = fixture.nativeElement.querySelector('#addPhoneButton');
 
+    //assert
     expect(addButton).toBeTruthy();
   });
 
   it('should hide add button when enableAdd is false', () => {
+    //arrange
     component.enableAdd = false;
 
+    //act
     fixture.detectChanges();
     const addButton = fixture.nativeElement.querySelector('#addPhoneButton');
 
+    //assert
     expect(addButton).toBeFalsy();
   });
 
   it('should not render phone items when formarray is empty', () => {
+    //arrange
     const formArray = new FormArray([]);
     component.formArray = formArray;
 
+    //act
     fixture.detectChanges();
     const phoneItemComponent = fixture.nativeElement.querySelector('app-phone-item');
 
+    //assert
     expect(phoneItemComponent).toBeFalsy();
   });
 
   it('should render phone item components when inputted form array has items', () => {
+    //arrange
     const formArray = new FormArray([
       buildPhoneGroup({
         number: '',
@@ -67,10 +77,11 @@ describe('PhoneListComponent', () => {
     ]);
     component.formArray = formArray;
 
+    //act
     fixture.detectChanges();
-
     const phoneItemComponent = fixture.nativeElement.querySelector('app-phone-item');
 
+    //assert
     expect(phoneItemComponent).toBeTruthy();
   });
 
