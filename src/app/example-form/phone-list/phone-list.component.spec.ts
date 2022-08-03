@@ -98,7 +98,7 @@ describe('PhoneListComponent', () => {
     expect(component.formArray.value.length).toBe(1);
   });
 
-  it('phone items count should decrease by 1 when remove phoneRemoved() is called', () => {
+  it('should remove phone when phoneRemoved() is called', () => {
     //arrange
     const phoneToDelete = buildPhoneGroup({
       number: '',
