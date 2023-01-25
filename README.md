@@ -1,4 +1,4 @@
-# Angular Reactive Form -- Component Tree Approach
+# Angular Reactive Forms -- Component Tree Approach
 
 An simple code repository to showcase an approach to map reactive form elements to a component tree in a way that is clean and easy to maintain.  
 
